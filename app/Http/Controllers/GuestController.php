@@ -21,7 +21,7 @@ class GuestController extends Controller
             'first_seat_name' => ['required', 'string', 'unique:guests,first_seat_name', 'max:255'],
             'first_seat_phone' => ['required', 'numeric', 'unique:guests,first_seat_phone', 'digits:11'],
             'second_seat_name' => ['sometimes', 'required', 'string', 'unique:guests,second_seat_name', 'max:255'],
-            'second_seat_phone' => ['sometimes', 'required', 'numeric', 'unique:guests,second_seat_phone', 'digits:11'],
+            'second_seat_phone' => ['nullable', 'numeric', 'unique:guests,second_seat_phone', 'digits:11'],
             'confirmation' => ['required', 'string', 'max:3']
         ]);
 
